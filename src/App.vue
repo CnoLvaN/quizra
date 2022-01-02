@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div v-if="false" id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
@@ -7,6 +7,18 @@
 </template>
 
 <style lang="scss">
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(19, 4, 39);
+  color: green;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
