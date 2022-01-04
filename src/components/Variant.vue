@@ -18,7 +18,13 @@ export default {
 .answer {
   border: 1vw solid rgba(119, 240, 119, 0.8);
   border-radius: var(--gap);
-  color: rgba(255, 255, 255, 0.781);
+  color: #000000;
   font-size: var(--gap);
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.answer:hover {
+  transform: scale(1.05) rotate(1deg);
 }
 </style>

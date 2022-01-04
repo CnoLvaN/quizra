@@ -1,7 +1,7 @@
 <template>
     <div class="finish-desk">
       <header class="header">
-        <h1 class="finish-desk__title">Finish QUIZ</h1>
+        <h1 class="finish-desk__title">"somebody" is winner</h1>
       </header>
 
       <div class="finish-him">
@@ -43,22 +43,19 @@ export default {
     return {
       winners: [
         {
-          id: 2,
+          id: 1,
           name: 'Alex',
-          score: 256,
-          height: 60
+          score: 267
         },
         {
-          id: 1,
+          id: 2,
           name: 'Alise',
-          score: 302,
-          height: 80
+          score: 403
         },
         {
           id: 3,
           name: 'Nika',
-          score: 224,
-          height: 40
+          score: 234
         }
       ]
     }
@@ -81,7 +78,7 @@ export default {
   --gap: 5vw;
 
   display: grid;
-  grid-template-rows: 25vw 1fr;
+  grid-template-rows: 20vw 1fr;
   position: relative;
   height: 100vh;
   overflow: auto;
@@ -98,6 +95,7 @@ export default {
   width: fit-content;
   height: 100vw;
   margin: 0 auto;
+  padding-top: 105vw;
   position: relative;
 }
 
@@ -114,5 +112,9 @@ export default {
   margin: 0 auto;
   color: rgba(119, 240, 119, 0.8);
   font-size: 5vw;
+}
+
+td {
+  width: 50%;
 }
 </style>

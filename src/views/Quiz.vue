@@ -29,22 +29,22 @@ export default {
       variants: [
         {
           id: 1,
-          label: 'variant 1',
+          label: 'variant #1',
           color: 'red'
         },
         {
           id: 2,
-          label: 'variant 2',
+          label: 'variant #2',
           color: 'yellow'
         },
         {
           id: 3,
-          label: 'variant 3',
+          label: 'variant #3',
           color: 'green'
         },
         {
           id: 4,
-          label: 'variant 4',
+          label: 'variant #4',
           color: 'blue'
         }
       ]
@@ -68,7 +68,7 @@ export default {
   }
 }
 .question {
-  color: rgba(119, 240, 119, 0.8);
+  color: rgba(4, 0, 255, 0.801);
 }
 
 .header {
@@ -83,5 +83,22 @@ export default {
   grid-template-rows: repeat(2, 1fr);
   gap: var(--gap);
   padding: 0 var(--gap) var(--gap);
+  position: relative;
+}
+
+.answers::before {
+  content: "15";
+  color: rgba(119, 240, 119, 0.8);
+  font-size: 10vw;
+  position: absolute;
+  top: 42.5%;
+  left: 40%;
+  width: 20vw;
+  height: 20vw;
+  background: rgb(19, 4, 39);
+  border: 1vw solid rgba(119, 240, 119, 0.8);
+  border-radius: 50%;
+  z-index: 1000;
+  padding-top: 3%;
 }
 </style>
