@@ -78,13 +78,15 @@ export default {
   --gap: 5vw;
 
   display: grid;
-  grid-template-rows: 20vw 1fr;
+  grid-template-rows: 20vh 1fr;
   position: relative;
   height: 100vh;
   overflow: auto;
 
   &__title {
+    font-size: x-large;
     color: rgba(119, 240, 119, 0.8);
+    z-index: 1001;
   }
 }
 .places {
@@ -93,9 +95,9 @@ export default {
   justify-content: center;
   border-bottom: 2vw solid rgba(119, 240, 119, 0.8);
   width: fit-content;
-  height: 100vw;
+  height: 40vh;
   margin: 0 auto;
-  padding-top: 105vw;
+  padding-top: 55vh;
   position: relative;
 }
 
@@ -107,11 +109,12 @@ export default {
 
 .table {
   border: 1vw solid rgba(119, 240, 119, 0.8);
+  border-radius: 0 0 25% 25%;
   width: 78vw;
-  height: 40vw;
+  height: 20vh;
   margin: 0 auto;
   color: rgba(119, 240, 119, 0.8);
-  font-size: 5vw;
+  font-size: 3vh;
 }
 
 td {

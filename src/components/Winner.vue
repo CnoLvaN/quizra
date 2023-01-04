@@ -2,7 +2,7 @@
   <div
     v-if="content"
     class="winner"
-    :style='`height: ${content.score / 4}vw`'
+    :style='`height: ${content.score / 7}vh`'
   >
     {{ content.name }}
     <br />
@@ -45,9 +45,15 @@ export default {
   padding-top: 4vw;
   position: relative;
   font-size: 5vw;
-  max-height: 100vw;
-  min-height: 20vw;
+  max-height: 56vh;
+  min-height: 10vh;
   padding-top: 5vw;
+  animation-name: winnerAn;
+  animation-duration: 0.8s;
+  animation-iteration-count: 1;
+  animation-delay: 100ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
 .crown {

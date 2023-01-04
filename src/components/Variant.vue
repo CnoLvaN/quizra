@@ -16,7 +16,7 @@ export default {
 
 <style scoped lang="scss">
 .answer {
-  border: 1vw solid rgba(119, 240, 119, 0.8);
+  border: 3px solid rgba(119, 240, 119, 0.8);
   border-radius: var(--gap);
   color: #000000;
   font-size: var(--gap);
@@ -25,6 +25,6 @@ export default {
 }
 
 .answer:hover {
-  transform: scale(1.05) rotate(1deg);
+  transform: scale(1.05) rotate(0.5deg);
 }
 </style>
