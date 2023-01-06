@@ -1,19 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { NhostClient } from '@nhost/vue'
 import Home from '../views/Home.vue'
+
+const nhost = new NhostClient({
+  subdomain: import.meta.env.VITE_NHOST_SUBDOMAIN,
+  region: import.meta.env.VITE_NHOST_REGION
+})
+
+console.log('nhost', nhost)
 
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
     path: '/rooms/:id/quiz',
@@ -40,16 +40,18 @@ const routes = [
     name: 'Room',
     component: () => import(/* webpackChunkName: "room" */ '../views/Room.vue')
   },
-  {
-    path: '/menu',
-    name: 'Menu',
-    component: () => import(/* webpackChunkName: "menu" */ '../views/Menu.vue')
-  }
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
+})
+
+router.beforeEach(async (to) => {
+  if (to.path === '/profile' && !(await nhost.auth.isAuthenticatedAsync())) {
+    return '/sign-in'
+  }
+  return true
 })
 
 export default router

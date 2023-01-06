@@ -2,7 +2,7 @@
 <div class="all-players">
   <header class="header">
     <h1 class="all-players__log">Wait other players</h1>
-    <h3>room code:</h3>
+    <h3 style="margin-top: -2vh">room code:</h3>
     <h3 style="margin-top: -2vh">room online: {{ players.length }}</h3>
   </header>
   <div class="room-players">
@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import Player from '@/components/Player'
+import Player from '@/components/Player.vue'
 
 export default {
   name: 'Room',

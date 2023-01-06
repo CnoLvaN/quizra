@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import Winner from '@/components/Winner'
+import Winner from '@/components/Winner.vue'
 
 export default {
   name: 'Finish',

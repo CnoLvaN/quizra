@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import ChoseRoom from '@/components/ChoseRoom'
+import ChoseRoom from '@/components/ChoseRoom.vue'
 
 export default {
   name: 'Rooms',

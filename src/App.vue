@@ -1,11 +1,6 @@
 <template>
-  <div v-if="false" id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
   <router-view/>
 </template>
-
 <style lang="scss">
 *, *::before, *::after {
   box-sizing: border-box;
@@ -17,6 +12,7 @@ body {
   padding: 0;
   background: rgb(19, 4, 39);
   color: green;
+  width: 100vw;
 }
 
 #app {

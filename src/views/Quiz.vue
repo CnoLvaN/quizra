@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import Variant from '@/components/Variant'
+import Variant from '@/components/Variant.vue'
 
 export default {
   name: 'Quiz',
